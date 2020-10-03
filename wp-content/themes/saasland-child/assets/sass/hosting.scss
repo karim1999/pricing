@@ -1,0 +1,39 @@
+// Imports
+@import 'style';
+.content {
+  padding: 70px 223px;
+  .learn-more {
+    font-family: $font2;
+    font-weight: $semibold_weight;
+    font-size: 25px;
+  }
+  .hosting-plans {
+    @include display-flex(row, center, center);
+    margin-top: 50px;
+  }
+  .why {
+    font-family: $font1;
+    font-size: 40px;
+    font-weight: $semibold_weight;
+    text-align: center;
+    margin-top: 90px;
+  }
+  .why-images {
+    @include display-flex(row, center, center);
+    img {
+      width: 400px;
+    }
+  }
+}
+.header-btns {
+  button {
+    @include main-button($secondary3_color, 50px, $font1, $medium_weight, 20px);
+    &.btn1 {
+      margin-right: 20px;
+    }
+    &.btn2 {
+      background-color: $primary_color;
+      color: $secondary3_color;
+    }
+  }
+}

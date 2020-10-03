@@ -1,0 +1,353 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-left {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+  align-self: flex-start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100vw;
+}
+
+.unique {
+  color: #52A6C4;
+}
+
+.unique2 {
+  color: #8333EA;
+}
+
+h1, .h1 {
+  font-size: 20px;
+}
+
+h2, .h2 {
+  font-size: 18px;
+}
+
+h3, .h3 {
+  font-size: 16px;
+}
+
+h4, .h4 {
+  font-size: 14px;
+}
+
+h5, .h5 {
+  font-size: 12px;
+}
+
+h6, .h6 {
+  font-size: 10px;
+}
+
+.flex-0 {
+  flex: 0 !important;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-2 {
+  flex: 2 !important;
+}
+
+.flex-3 {
+  flex: 3 !important;
+}
+
+.flex-4 {
+  flex: 4 !important;
+}
+
+.flex-5 {
+  flex: 5 !important;
+}
+
+.flex-6 {
+  flex: 6 !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}
+a:hover {
+  color: #52A6C4;
+}
+
+.horizontal-list {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.horizontal-list li {
+  list-style-type: none;
+}
+
+.input-container {
+  margin-top: 20px;
+  position: relative;
+}
+.input-container input {
+  height: 60px;
+  border-radius: 10px;
+  border: solid thin rgba(112, 112, 112, 0.28);
+  min-width: 400px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.input-container img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .col-sm-1 {
+    width: 8.33%;
+  }
+
+  .col-sm-2 {
+    width: 16.66%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33%;
+  }
+
+  .col-sm-5 {
+    width: 41.66%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33%;
+  }
+
+  .col-sm-8 {
+    width: 66.66%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33%;
+  }
+
+  .col-sm-11 {
+    width: 91.66%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sm-only {
+    display: block !important;
+  }
+
+  .hidden-sm {
+    display: none !important;
+  }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

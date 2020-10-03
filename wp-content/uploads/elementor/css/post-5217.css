@@ -1,0 +1,19 @@
+.elementor-5217 .elementor-element.elementor-element-57919aa:not(.elementor-motion-effects-element-type-background), .elementor-5217 .elementor-element.elementor-element-57919aa > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("http://pricing.localhost/wp-content/uploads/2020/10/background.png");background-size:cover;}.elementor-5217 .elementor-element.elementor-element-57919aa, .elementor-5217 .elementor-element.elementor-element-57919aa > .elementor-background-overlay{border-radius:15px 15px 15px 15px;}.elementor-5217 .elementor-element.elementor-element-57919aa{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;}.elementor-5217 .elementor-element.elementor-element-57919aa > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-bc-flex-widget .elementor-5217 .elementor-element.elementor-element-33e02c6.elementor-column .elementor-column-wrap{align-items:center;}.elementor-5217 .elementor-element.elementor-element-33e02c6.elementor-column.elementor-element[data-element_type="column"] > .elementor-column-wrap.elementor-element-populated > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-5217 .elementor-element.elementor-element-33e02c6.elementor-column > .elementor-column-wrap > .elementor-widget-wrap{justify-content:center;}.elementor-5217 .elementor-element.elementor-element-5dd796c .elementor-heading-title{color:var( --e-global-color-6c9bd4f );font-family:"Poppins SemiBold", Sans-serif;font-size:50px;font-weight:600;}.elementor-5217 .elementor-element.elementor-element-438a75f .elementor-spacer-inner{height:30px;}.elementor-5217 .elementor-element.elementor-element-956a8bf .elementor-heading-title{color:#F8F7F2;font-family:"Poppins Medium", Sans-serif;font-size:25px;font-weight:500;}.elementor-5217 .elementor-element.elementor-element-5a9d00f > .elementor-column-wrap > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute){margin-bottom:-1px;}.elementor-5217 .elementor-element.elementor-element-5a9d00f > .elementor-element-populated{padding:0px 0px 0px 0px;}@media(min-width:768px){.elementor-5217 .elementor-element.elementor-element-5aabb26{width:12.414%;}.elementor-5217 .elementor-element.elementor-element-33e02c6{width:37.586%;}.elementor-5217 .elementor-element.elementor-element-5e26d6a{width:6.316%;}.elementor-5217 .elementor-element.elementor-element-5a9d00f{width:43.684%;}}/* Start custom CSS for section, class: .elementor-element-57919aa */.elementor-5217 .elementor-element.elementor-element-57919aa {
+    margin: 23px;
+}/* End custom CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-SemiBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins Medium';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

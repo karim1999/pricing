@@ -1,0 +1,31 @@
+/*
+Theme Name: Saasland Child
+Theme URI: https://droitthemes.com/wp/saasland
+Template: saasland
+Author: DroitThemes
+Author URI: https://themeforest.net/user/droitthemes/portfolio
+Description: Saasland is a creative WordPress theme for saas, software, startup, app, agency and related products & services.
+Version: 1.1.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: saasland-child
+*/
+
+
+html .formcraft-css .powered-by {
+    color: #ffffff;
+    display: none !important;
+    margin: 0 !important;
+    font-weight: 100 !important;
+    font-size: 0 !important;
+    font-weight: 100 !important;
+    letter-spacing: 0 !important;
+}
+
+.page-template-default .menu_toggle .hamburger span, .page-template-default .menu_toggle .hamburger-cross span {
+    background: #51a7c4;
+}
+
+.nav_right_btn .login_btn {
+    padding: 12px;
+}

@@ -1,0 +1,19 @@
+.elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-container{max-width:1350px;min-height:400px;}.elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-container:after{content:"";min-height:inherit;}.elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-5231 .elementor-element.elementor-element-512d08b:not(.elementor-motion-effects-element-type-background), .elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("http://pricing.localhost/wp-content/uploads/2020/10/background.png");background-size:cover;}.elementor-5231 .elementor-element.elementor-element-512d08b, .elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-background-overlay{border-radius:15px 15px 15px 15px;}.elementor-5231 .elementor-element.elementor-element-512d08b{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-5231 .elementor-element.elementor-element-512d08b > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-5231 .elementor-element.elementor-element-05b1738{text-align:left;}.elementor-5231 .elementor-element.elementor-element-05b1738 .elementor-heading-title{color:var( --e-global-color-6c9bd4f );font-family:"Poppins SemiBold", Sans-serif;font-size:50px;font-weight:600;}.elementor-5231 .elementor-element.elementor-element-c58dd2a .elementor-spacer-inner{height:18px;}.elementor-5231 .elementor-element.elementor-element-9c4a0ab{text-align:left;}.elementor-5231 .elementor-element.elementor-element-9c4a0ab .elementor-heading-title{color:var( --e-global-color-6c9bd4f );font-family:"Poppins Medium", Sans-serif;font-size:25px;font-weight:500;}.elementor-5231 .elementor-element.elementor-element-ac33a9e .elementor-spacer-inner{height:29px;}/* Start custom CSS for section, class: .elementor-element-512d08b */.elementor-5231 .elementor-element.elementor-element-512d08b {
+    margin: 23px;
+}/* End custom CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-SemiBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins Medium';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

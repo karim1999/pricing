@@ -1,0 +1,22 @@
+@mixin display-flex($flex-direction, $justify-content, $align-items, $wrap: wrap){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $wrap;
+}
+@mixin main-button($background_color, $border-radius, $font-family, $font-weight, $font-size, $color: $white){
+  background-color: $background_color;
+  border-radius: $border-radius $border-radius $border-radius $border-radius;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+  border: none;
+  padding: 13px 51px;
+  cursor: pointer;
+  &:hover {
+    color: $background_color !important;
+    background-color: $color !important;
+    border: solid thin $background_color !important;
+  }
+}

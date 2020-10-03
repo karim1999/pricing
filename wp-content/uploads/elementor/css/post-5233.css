@@ -1,0 +1,16 @@
+.elementor-5233 .elementor-element.elementor-element-e92e9b5 > .elementor-container{max-width:1600px;}.elementor-bc-flex-widget .elementor-5233 .elementor-element.elementor-element-b8890d0.elementor-column .elementor-column-wrap{align-items:center;}.elementor-5233 .elementor-element.elementor-element-b8890d0.elementor-column.elementor-element[data-element_type="column"] > .elementor-column-wrap.elementor-element-populated > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-5233 .elementor-element.elementor-element-b8890d0.elementor-column > .elementor-column-wrap > .elementor-widget-wrap{justify-content:center;}.elementor-5233 .elementor-element.elementor-element-162cf9d .elementor-heading-title{color:var( --e-global-color-3baafe71 );font-family:"Montserrat SemiBold", Sans-serif;font-size:40px;font-weight:600;}.elementor-5233 .elementor-element.elementor-element-c63dc84 .elementor-spacer-inner{height:24px;}.elementor-5233 .elementor-element.elementor-element-b090b5e .elementor-heading-title{color:#707070;font-family:"Montserrat Medium", Sans-serif;font-size:20px;font-weight:500;}.elementor-5233 .elementor-element.elementor-element-a1743f2 .elementor-spacer-inner{height:45px;}.elementor-5233 .elementor-element.elementor-element-e36f073 .elementor-button{font-family:"Montserrat SemiBold", Sans-serif;font-size:20px;font-weight:600;background-color:#51A7C4;border-radius:70px 70px 70px 70px;padding:30px 50px 30px 050px;}@media(min-width:768px){.elementor-5233 .elementor-element.elementor-element-b8890d0{width:47.456%;}.elementor-5233 .elementor-element.elementor-element-f7ac0f4{width:52.544%;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Montserrat SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Montserrat-SemiBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Montserrat Medium';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Montserrat-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

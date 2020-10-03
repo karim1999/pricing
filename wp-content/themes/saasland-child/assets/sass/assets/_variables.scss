@@ -1,0 +1,36 @@
+// Typography
+$font1: 'Poppins', sans-serif;
+$font2: 'Montserrat', sans-serif;
+$regular_weight: 400;
+$medium_weight: 500;
+$semibold_weight: 600;
+
+//Font Size
+$h1: 20px;
+$h2: 18px;
+$h3: 16px;
+$h4: 14px;
+$h5: 12px;
+$h6: 10px;
+
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+//$green: #52A6C4;
+//$blue: #8333EA;
+$green: #51A7C4;
+$blue: #51A7C4;
+$grey: rgba(112, 112, 112, 0.28);
+
+//Main Colors (Light)
+$primary_color: $white;
+$secondary_color: $white;
+$secondary2_color: $green;
+$secondary3_color: $blue;
+$font_color: $black;
+$border: $grey solid 1px;
+
+
+//Border
+$box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);

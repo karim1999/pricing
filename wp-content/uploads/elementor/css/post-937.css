@@ -1,0 +1,48 @@
+.elementor-kit-937{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-color-2b7f6310:#4054B2;--e-global-color-43920f9a:#23A455;--e-global-color-69e57da9:#000;--e-global-color-24c58937:#FFF;--e-global-color-3baafe71:#010E28;--e-global-color-fa6565d:#294551;--e-global-color-6d7cbfbc:#365C6C;--e-global-color-10494043:#51A7C4;--e-global-color-3b3ea625:#FBFCFE;--e-global-color-15b15d59:#F1FCFF;--e-global-color-5e32e2a5:#020101;--e-global-color-059586c:#52A6C4;--e-global-color-8a7f009:#8333EA;--e-global-color-6c9bd4f:#FFFFFF;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;--e-global-typography-cb50132-font-family:"Poppins Regular";--e-global-typography-cb50132-font-weight:400;--e-global-typography-ea86145-font-family:"Poppins Medium";--e-global-typography-ea86145-font-weight:500;--e-global-typography-26921af-font-family:"Poppins SemiBold";--e-global-typography-26921af-font-weight:600;--e-global-typography-a039b2b-font-family:"Montserrat Regular";--e-global-typography-a039b2b-font-weight:400;--e-global-typography-6ef9634-font-family:"Montserrat Medium";--e-global-typography-6ef9634-font-weight:500;--e-global-typography-4ee3a78-font-family:"Montserrat SemiBold";--e-global-typography-4ee3a78-font-weight:600;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.elementor-widget:not(:last-child){margin-bottom:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1025px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:768px;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-Regular.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins Medium';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Poppins SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Poppins-SemiBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Montserrat Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Montserrat-Regular.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Montserrat Medium';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Montserrat-Medium.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Montserrat SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('http://pricing.localhost/wp-content/uploads/2020/09/Montserrat-SemiBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

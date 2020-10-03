@@ -1,0 +1,64 @@
+// Imports
+@import 'style';
+
+.plans {
+  .header-container {
+    text-align: center;
+    .text {
+      padding-left: 0 !important;
+    }
+  }
+}
+.row-flex {
+  @include display-flex(row, center, center);
+  img {
+    width: 25px;
+    margin-top: 0 !important;
+    margin-right: 10px;
+  }
+  h3 {
+    font-family: $font2;
+    font-weight: $regular_weight;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+ul.top-nav {
+  margin: 0 100px;
+  @include display-flex(row, space-between, center);
+  border: solid .3px rgba(112, 112, 112, 0.18);
+  border-top: none;
+  border-radius: 0 0 30px 30px;
+  li {
+    list-style-type: none;
+    font-family: $font1;
+    font-weight: $semibold_weight;
+    font-size: 20px;
+    margin: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    &:hover,
+    &.active {
+      color: $secondary2_color;
+      &:after {
+        content: "";
+        background: $secondary2_color;
+        width: 70%;
+        height: 10px;
+        border-radius: 10px 10px 0 0;
+        margin-top: 5px;
+        margin-left: 15%;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+    }
+  }
+}
+.content {
+  padding: 0 10%;
+  .hosting-plans {
+    @include display-flex(row, center, normal);
+    margin-top: 50px;
+  }
+}
