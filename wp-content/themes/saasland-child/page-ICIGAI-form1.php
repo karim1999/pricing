@@ -141,17 +141,17 @@ while ( have_posts() ) : the_post();
                                     <label for=""
                                     >Monthly / Yearly? <span class="required">*</span></label
                                     >
-                                    <label class="radio">
-                                        <input type="radio" name="bundle" value="Monthly" v-model="Monthly_Yearly" />
-                                        Monthly
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="bundle" value="Yearly" v-model="Monthly_Yearly" />
-                                        Yearly
-                                    </label>
+                                    <div class="">
+                                        <label class="radio">
+                                            <input type="radio" name="bundle" value="Monthly" v-model="Monthly_Yearly" />
+                                            Monthly
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="bundle" value="Yearly" v-model="Monthly_Yearly" />
+                                            Yearly
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row2" v-if="product_type_id === '4046528000000040019'" style="margin-top: 0">
                                 <div class="form-element" style="margin-top: 0">
                                     <div class="form-element" style="margin-top: 0">
                                         <label for=""
