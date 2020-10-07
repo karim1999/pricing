@@ -112,6 +112,13 @@ a {
             background: #dddddd;
         }
     }
+    select::-ms-expand {
+        display: none;
+    }
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
     textarea {
         height: 200px;
         min-width: auto;
@@ -123,7 +130,7 @@ a {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 30px;
+        width: 20px;
         margin-right: 20px;
     }
 }
@@ -133,8 +140,9 @@ h1 {
 .progress-field {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
     span {
         //padding: 5px 12px;
         width: 40px;
@@ -151,9 +159,12 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
+        width: 200px;
     }
 
     .progress-step:not(:last-of-type) {
+        //margin-right: 20px;
     }
 
     p {
@@ -163,12 +174,15 @@ h1 {
         text-align: center;
     }
 
+    .active {
+        cursor: pointer;
+    }
     .active span {
-        background: #4054B2;
+        background: $secondary2_color;
     }
 
     .active p {
-        color: #4054B2;
+        color: $secondary2_color;
     }
 }
 

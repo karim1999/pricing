@@ -294,6 +294,25 @@ const productTrainingType = {
       });
   },
 };
+const vouchersBundle = {
+  async get() {
+    return axios
+      .get(Constants.URL + "/report/All_Vouchers_Bundle", {
+        headers: {
+          Authorization: "Zoho-oauthtoken " + (await auth.getToken()),
+        }
+      })
+      .then(res => {
+        return res.data.data;
+      })
+      .catch(err => {
+        console.log(err.response);
+        if (err.response.status === 401) {
+          return productPlans.get(auth.generateToken());
+        }
+      });
+  },
+};
 // const Hostings = {
 //   async get() {
 //     return axios

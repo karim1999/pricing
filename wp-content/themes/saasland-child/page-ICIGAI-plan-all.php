@@ -71,7 +71,7 @@ while ( have_posts() ) : the_post();
 <!--                        </header-component>-->
                         <div class="table-container">
                             <div class="row2">
-                                <h1 style="margin-left: 20px">Plans/ Features</h1>
+                                <h1 style="margin-left: 20px; min-width: 200px">Plans/ Features</h1>
                                 <div class="plans-container">
                                     <div class="plan" v-for="(plan, index) in plans" :key="plan.ID">
                                         <p class="title">{{ plan.Feature_Plan }}</p>

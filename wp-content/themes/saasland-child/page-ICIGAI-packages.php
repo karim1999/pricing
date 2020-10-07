@@ -76,7 +76,7 @@ while ( have_posts() ) : the_post();
                         <div class="table-container">
                             <header-wizard inline-template>
                                 <div class="progress-field">
-                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 1}">
+                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 1}" @click="goToStep(index, 1)">
                                         <span class="step-one">{{index+1}}</span>
                                         <p class="progress-step__text">{{step.name}}</p>
                                     </div>
@@ -84,7 +84,7 @@ while ( have_posts() ) : the_post();
                             </header-wizard>
 
                             <div class="row2">
-                                <h1 style="margin-left: 20px">Support Packages</h1>
+                                <h1 style="margin-left: 20px; min-width: 200px">Support Packages</h1>
                                 <div class="plans-container">
                                     <div v-for="(plan, index) in plans" :key="plan.ID" :class="{plan: true, active: plan.ID === plan_id}">
                                         <p class="title">{{ plan.Support_Package }}</p>
@@ -127,6 +127,9 @@ while ( have_posts() ) : the_post();
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row2 btn-container">
+                                <button class="back-btn" @click="goBack()">Back</button>
                             </div>
                         </div>
                     </div>

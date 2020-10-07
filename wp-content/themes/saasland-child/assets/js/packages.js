@@ -45,6 +45,9 @@ Vue.component('product-packages', {
             this.features= finalFeatures;
             this.isLoading = false;
         },
+        goBack(){
+            window.history.back();
+        },
         getCurrentQueryString(){
             var search = location.search.substring(1);
             return JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })

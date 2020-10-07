@@ -75,7 +75,7 @@ while ( have_posts() ) : the_post();
                         <div class="form-content">
                             <header-wizard inline-template>
                                 <div class="progress-field">
-                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 0}">
+                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 0}" @click="goToStep(index, 0)">
                                         <span class="step-one">{{index+1}}</span>
                                         <p class="progress-step__text">{{step.name}}</p>
                                     </div>
@@ -117,15 +117,15 @@ while ( have_posts() ) : the_post();
                                 </div>
                             </div>
                             <div class="row2">
-                                <div class="form-element">
-                                    <label for=""
-                                    >Number of licenses you need
-                                        <span class="required">*</span></label
-                                    >
-                                    <div class="input-container">
-                                        <input placeholder="Select a number" type="number" v-model="licenses" />
-                                    </div>
-                                </div>
+<!--                                <div class="form-element">-->
+<!--                                    <label for=""-->
+<!--                                    >Number of licenses you need-->
+<!--                                        <span class="required">*</span></label-->
+<!--                                    >-->
+<!--                                    <div class="input-container">-->
+<!--                                        <input placeholder="Select a number" type="number" v-model="licenses" />-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="form-element" v-if="planData.Test_Vouchers_Applicable && planData.Test_Vouchers_Applicable !== 'false'">
                                     <label for=""
                                     >Number of vouchers you need
@@ -133,6 +133,58 @@ while ( have_posts() ) : the_post();
                                     >
                                     <div class="input-container">
                                         <input placeholder="Select a number" type="number" v-model="vouchers" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row2" v-if="product_type_id === '4046528000000040019'" style="margin-top: 0">
+                                <div class="form-element" style="margin-top: 0">
+                                    <label for=""
+                                    >Monthly / Yearly? <span class="required">*</span></label
+                                    >
+                                    <label class="radio">
+                                        <input type="radio" name="bundle" value="Monthly" v-model="Monthly_Yearly" />
+                                        Monthly
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="bundle" value="Yearly" v-model="Monthly_Yearly" />
+                                        Yearly
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row2" v-if="product_type_id === '4046528000000040019'" style="margin-top: 0">
+                                <div class="form-element" style="margin-top: 0">
+                                    <div class="form-element" style="margin-top: 0">
+                                        <label for=""
+                                        >Voucher Bundles
+                                            <span class="required"></span></label
+                                        >
+                                        <div class="input-container">
+                                            <select name="" v-model="bundle" id="">
+                                                <option value="">Select</option>
+                                                <option v-for="option in vouchersBundle" :key="option.ID" :value="option.ID">{{option.Voucher_Bundle_Name}} - {{option.Price}}$</option>
+                                            </select>
+                                            <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/arrow-down.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="row2">
+                                <div class="form-element">
+                                    <label for=""
+                                    >No of Admins/Teachers
+                                        <span class="required">*</span></label
+                                    >
+                                    <div class="input-container">
+                                        <input placeholder="Select a number" type="number" v-model="teachers" />
+                                    </div>
+                                </div>
+                                <div class="form-element">
+                                    <label for=""
+                                    >No of Students
+                                        <span class="required">*</span></label
+                                    >
+                                    <div class="input-container">
+                                        <input placeholder="Select a number" type="number" v-model="students" />
                                     </div>
                                 </div>
                             </div>
@@ -165,6 +217,7 @@ while ( have_posts() ) : the_post();
                                             <option value="">Select</option>
                                             <option v-for="option in productTrainingTypes" :key="option.ID" :value="option.ID">{{option.Training_Name}}</option>
                                         </select>
+                                        <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/arrow-down.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="form-element">
@@ -191,8 +244,12 @@ while ( have_posts() ) : the_post();
                                                                             institution,
                                                                             licenses,
                                                                             vouchers,
+                                                                            teachers,
+                                                                            students,
                                                                             training_type,
-                                                                            n_users_training
+                                                                            Monthly_Yearly,
+                                                                            bundle,
+                                                                            n_users_training,
                                 })">
                                     <button class="proceed-btn">Proceed</button>
                                 </a>

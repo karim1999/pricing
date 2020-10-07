@@ -60,4 +60,29 @@
       }
     }
   }
+  .summary-toggle{
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .summary{
+    flex-direction: column;
+    align-items: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    .row2{
+      flex-direction: column;
+      align-items: normal;
+    }
+    .form-element2 {
+      margin-right: 50px;
+      display: flex;
+      flex: 1;
+      word-break: break-word;
+    }
+    label {
+      margin-top: 0;
+    }
+    background-color: #F6F7FB;
+  }
 }

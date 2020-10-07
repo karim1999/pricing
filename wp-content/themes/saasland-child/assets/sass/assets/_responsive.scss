@@ -7,10 +7,34 @@
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 767px) {
+    input, select {
+        min-width: auto !important;
+        width: 325px !important;
+    }
+    input[type="radio"]{
+        min-width: auto !important;
+        width: auto !important;
+    }
     .sm-only{
         display: block !important;
     }
     .hidden-sm{
         display: none !important;
+    }
+    .form-content, .services-content, .table-container {
+        margin: 0 3% !important;
+        top: -80px !important;
+    }
+    .summary, .progress-field {
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 424px) {
+    input, select {
+        min-width: auto !important;
+        width: 285px !important;
+    }
+    .form-content {
+        padding: 60px 20px !important;
     }
 }

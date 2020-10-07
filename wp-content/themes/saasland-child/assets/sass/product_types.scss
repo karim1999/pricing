@@ -24,8 +24,9 @@
   }
 }
 ul.top-nav {
-  margin: 0 100px;
-  @include display-flex(row, space-between, center);
+  margin: 0 2%;
+  padding-left: 0;
+  @include display-flex(row, center, center);
   border: solid .3px rgba(112, 112, 112, 0.18);
   border-top: none;
   border-radius: 0 0 30px 30px;

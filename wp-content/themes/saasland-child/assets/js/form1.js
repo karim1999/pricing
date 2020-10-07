@@ -13,12 +13,17 @@ Vue.component('form1', {
             institution: "4046528000000040055",
             licenses: 0,
             vouchers: 0,
+            teachers: 0,
+            students: 0,
             training_type: "",
+            Monthly_Yearly: "Monthly",
             n_users_training: 0,
             isLoading: false,
             institutionTypes: [],
             planData: {},
-            productTrainingTypes: []
+            productTrainingTypes: [],
+            vouchersBundle: [],
+            bundle: ""
         };
     },
     mounted(){
@@ -36,6 +41,8 @@ Vue.component('form1', {
             this.institutionTypes= await productInstitution.get();
             this.productTrainingTypes= await productTrainingType.get();
             this.planData= await productPlans.getPlan(this.plan_id);
+            if(this.product_type_id === '4046528000000040019')
+                this.vouchersBundle= await vouchersBundle.get();
             this.isLoading= false
         },
         goBack(){

@@ -141,6 +141,13 @@ a:hover {
 .input-container input:disabled, .input-container textarea:disabled, .input-container select:disabled {
   background: #dddddd;
 }
+.input-container select::-ms-expand {
+  display: none;
+}
+.input-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .input-container textarea {
   height: 200px;
   min-width: auto;
@@ -152,7 +159,7 @@ a:hover {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
+  width: 20px;
   margin-right: 20px;
 }
 
@@ -163,8 +170,9 @@ h1 {
 .progress-field {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
 }
 .progress-field span {
   width: 40px;
@@ -180,6 +188,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  width: 200px;
 }
 .progress-field p {
   font-family: "Poppins", sans-serif;
@@ -187,11 +197,14 @@ h1 {
   color: #B3B3B3;
   text-align: center;
 }
+.progress-field .active {
+  cursor: pointer;
+}
 .progress-field .active span {
-  background: #4054B2;
+  background: #51A7C4;
 }
 .progress-field .active p {
-  color: #4054B2;
+  color: #51A7C4;
 }
 
 .modal.show {
@@ -399,12 +412,41 @@ h1 {
   }
 }
 @media only screen and (max-width: 767px) {
+  input, select {
+    min-width: auto !important;
+    width: 325px !important;
+  }
+
+  input[type=radio] {
+    min-width: auto !important;
+    width: auto !important;
+  }
+
   .sm-only {
     display: block !important;
   }
 
   .hidden-sm {
     display: none !important;
+  }
+
+  .form-content, .services-content, .table-container {
+    margin: 0 3% !important;
+    top: -80px !important;
+  }
+
+  .summary, .progress-field {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 424px) {
+  input, select {
+    min-width: auto !important;
+    width: 285px !important;
+  }
+
+  .form-content {
+    padding: 60px 20px !important;
   }
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -514,9 +556,11 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  margin-top: 50px;
   margin-right: 20px;
   margin-left: 20px;
   max-width: 500px;
+  min-width: 270px;
   flex: 1;
   border-radius: 10px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
@@ -642,6 +686,10 @@ h1 {
   font-size: 25px;
   font-weight: 600;
 }
+.service-card .edit-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
 .service-card .status-icon {
   margin-right: 10px;
   width: 75px;
@@ -756,11 +804,35 @@ h1 {
   background-color: #51A7C4 !important;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.pagination li:not(:last-of-type) {
+  margin-right: 10px;
+}
+.pagination .page-item {
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.pagination .page-item.active, .pagination .page-item:hover {
+  background-color: #51A7C4;
+  border-radius: 100%;
+}
+.pagination .page-item.active a, .pagination .page-item:hover a {
+  color: #ffffff;
+}
+
 .form-content {
   background-color: #ffffff;
   position: relative;
   top: -120px;
-  padding: 60px 60px;
+  padding: 30px 30px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 17px 4px rgba(112, 112, 112, 0.24);
   -moz-box-shadow: 0 0 17px 4px rgba(112, 112, 112, 0.24);

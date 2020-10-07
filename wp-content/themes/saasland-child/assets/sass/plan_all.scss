@@ -6,7 +6,7 @@
 .table-container {
   background-color: $white;
   position: relative;
-  top: -120px;
+  top: -80px;
   padding: 20px 20px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 17px 4px rgba(112, 112, 112, 0.24);
@@ -18,8 +18,10 @@
     font-size: 25px;
     font-weight: $semibold_weight;
   }
+  flex-wrap: nowrap;
+  overflow-x: scroll;
   .plans-container {
-    @include display-flex(row, space-evenly, flex-start, wrap);
+    @include display-flex(row, space-evenly, flex-start, nowrap);
     .plan {
       padding: 20px 0;
       width: 240px;
@@ -94,6 +96,7 @@
     font-family: $font1;
     font-weight: $semibold_weight;
     font-size: 20px;
+    min-width: 150px;
     @include display-flex(row, flex-start, center);
     img {
       width: 25px;
@@ -103,7 +106,8 @@
   .feature-container {
     padding-left: 17px;
     .feature-name {
-      @include display-flex(row, flex-start, center);
+      @include display-flex(row, flex-start, center, nowrap);
+      min-width: 200px;
       h2 {
         font-family: $font1;
         font-size: 18px;

@@ -119,7 +119,7 @@ while ( have_posts() ) : the_post();
                         <div class="services-content">
                             <header-wizard inline-template>
                                 <div class="progress-field">
-                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 2}">
+                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 2}" @click="goToStep(index, 2)">
                                         <span class="step-one">{{index+1}}</span>
                                         <p class="progress-step__text">{{step.name}}</p>
                                     </div>
@@ -128,9 +128,12 @@ while ( have_posts() ) : the_post();
                             <div class="row2">
                                 <h1>Professional Services</h1>
                             </div>
+                            <div class="row2" v-if="!isLoading && !services">
+                                <h2>Services are not available.</h2>
+                            </div>
                             <div class="row2 services">
                                     <div
-                                            v-for="(service, index) in services"
+                                            v-for="(service, index) in paginatedServices"
                                             :key="index"
                                             :index="index"
                                             :class="{'service-card': true, active: selectedServices.filter(s => service.ID === s.service).length !== 0}">
@@ -141,7 +144,8 @@ while ( have_posts() ) : the_post();
                                                     :src="service.Image_URL.url"
                                                     alt=""
                                             />
-                                            <h1 class="title2">{{ service.Sevice_Name }}</h1>
+                                            <h1 class="title2">{{ service.Sevice_Name }}
+                                                <span v-if="selectedServices.filter(s => service.ID === s.service).length !== 0" @click="editService(service)" class="edit-icon"><i class="fa fa-pencil"></i></span></h1>
                                         </div>
                                         <div class="row2">
                                             <img
@@ -164,14 +168,24 @@ while ( have_posts() ) : the_post();
                                             />
                                         </div>
                                         <div class="row2">
-                                            <p class="description" v-html="service.Description"></p>
+                                            <p class="description" v-html="truncate(service.Description, 100)" data-toggle="tooltip" data-html="true" data-placement="right" :title="service.Description"></p>
                                         </div>
                                         <div class="row btn-container">
-                                            <button v-show="selectedServices.filter(s => service.ID === s.service).length === 0" data-toggle="modal" :data-target="'#exampleModal'+service.ID">Get It Now</button>
+                                            <button v-show="selectedServices.filter(s => service.ID === s.service).length === 0" data-toggle="modal" @click="openModal('#exampleModal'+service.ID)">Get It Now</button>
                                             <button v-if="selectedServices.filter(s => service.ID === s.service).length !== 0" @click="unSelectService(service)" ><i class="fa fa-check"></i> Checked</button>
                                         </div>
                                     </div>
+
                             </div>
+                                <paginate
+                                        v-if="!isLoading && services"
+                                        :page-count="pages"
+                                        :prev-text="'<<'"
+                                        :next-text="'>>'"
+                                        container-class="pagination"
+                                        page-class="page-item"
+                                        :click-handler="clickCallback">
+                                </paginate>
                             <div class="row2 btn-container">
                                 <button @click="goBack" class="back-btn">Back</button>
                                 <button @click="proceed" class="proceed-btn">Proceed</button>

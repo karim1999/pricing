@@ -14,10 +14,13 @@ Vue.component('form1', {
             institution: "",
             licenses: 1,
             vouchers: 1,
+            teachers: 0,
+            students: 0,
             firstName: "",
             lastName: "",
             institutionName: "",
             institutionType: "",
+            Monthly_Yearly: "Monthly",
             phone: "",
             email: "",
             isLoading: false,
@@ -48,6 +51,9 @@ Vue.component('form1', {
         this.package_name = params.get("package_name");
         this.institutionName = params.get("institutionName");
         this.institutionType = params.get("institutionType");
+        this.teachers = params.get("teachers");
+        this.students = params.get("students");
+        this.Monthly_Yearly = params.get("Monthly_Yearly");
     },
     methods: {
         async proceed(){
@@ -77,6 +83,15 @@ Vue.component('form1', {
                 }
                 if(this.training_type){
                     quoteData.Training_Package= this.training_type;
+                }
+                if(this.No_of_Admins_Teachers){
+                    quoteData.No_of_Admins_Teachers= this.teachers;
+                }
+                if(this.No_of_Students){
+                    quoteData.No_of_Students= this.students;
+                }
+                if(this.Monthly_Yearly){
+                    quoteData.Monthly_Yearly= this.Monthly_Yearly;
                 }
                 let quoteId= await Quote.create(quoteData)
                 console.log(quoteId)

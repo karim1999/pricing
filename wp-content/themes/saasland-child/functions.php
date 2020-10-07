@@ -80,6 +80,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js', 'api_file', null, true ); // change to vue.min.js for production
 		wp_enqueue_script( 'vue_loading', 'https://cdn.jsdelivr.net/npm/vue-loading-overlay@3', 'vue', null, true );
 		wp_enqueue_style ( 'vue_loading_css', 'https://cdn.jsdelivr.net/npm/vue-loading-overlay@3/dist/vue-loading.css' );
+		wp_enqueue_script( 'vue-paginate', 'https://unpkg.com/vuejs-paginate@latest', 'vue', null, true );
 		wp_enqueue_script( 'components_js', get_bloginfo('stylesheet_directory') . '/assets/js/components.js', 'vue', null, true );
 	}
 	if(is_page_template("page-ICIGAI-product-types.php")){

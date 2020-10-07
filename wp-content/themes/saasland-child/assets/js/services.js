@@ -10,19 +10,39 @@ Vue.component('plan-services', {
             query: {},
             requirements: "",
             usersNum: 1,
-            selectedServices: []
+            selectedServices: [],
+            pages: 1,
+            currentPage: 1,
+            numPerPage: 9
         };
     },
-    mounted(){
+    created(){
         this.query= this.getCurrentQueryString()
         this.getData()
+    },
+    computed: {
+        paginatedServices(){
+            if(this.services){
+                let start= this.numPerPage * (this.currentPage - 1);
+                console.log("start", start)
+                return this.services.slice(start, start + this.numPerPage)
+            }else{
+                return []
+            }
+        }
     },
     methods: {
         async getData() {
             this.isLoading = true;
             this.services= await productServices.get();
+            if(this.services)
+                this.pages= Math.ceil(this.services.length / this.numPerPage);
             console.log(this.services);
             this.isLoading = false;
+            Vue.nextTick(function () {
+                console.log("done")
+                jQuery('[data-toggle="tooltip"]').tooltip()
+            })
         },
         selectService(service){
             let data= {
@@ -33,12 +53,25 @@ Vue.component('plan-services', {
                 Professional_Services: service.ID,
                 name: service.Sevice_Name
             }
+            this.unSelectService(service)
             this.selectedServices.push(data)
             this.usersNum= 1;
             this.requirements= ""
         },
         unSelectService(service){
             this.selectedServices = this.selectedServices.filter(s => service.ID !== s.service);
+        },
+        editService(service){
+            let current = this.selectedServices.filter(s => service.ID === s.service);
+            this.requirements= current[0].Terms;
+            this.usersNum= current[0].Quantity;
+            console.log(service)
+            jQuery('#exampleModal'+service.ID).modal()
+        },
+        openModal(modalId){
+            this.usersNum= 1;
+            this.requirements= "";
+            jQuery(modalId).modal()
         },
         proceed(){
             let url= this.buildQueryString('/plan-addons', {});
@@ -68,6 +101,17 @@ Vue.component('plan-services', {
                 .map(k => esc(k) + '=' + esc(params[k]))
                 .join('&');
             return url + "?" + query
+        },
+        truncate(value, limit = 40){
+            if (value.length > limit) {
+                value = value.substring(0, (limit - 3)) + '...';
+            }
+
+            return value
+        },
+        clickCallback(pageNum) {
+            this.currentPage= pageNum
+            console.log(pageNum)
         }
     }
 });

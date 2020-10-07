@@ -75,7 +75,7 @@ while ( have_posts() ) : the_post();
                         <div class="form-content">
                             <header-wizard inline-template>
                                 <div class="progress-field">
-                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 5}">
+                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 5}" @click="goToStep(index, 5)">
                                         <span class="step-one">{{index+1}}</span>
                                         <p class="progress-step__text">{{step.name}}</p>
                                     </div>

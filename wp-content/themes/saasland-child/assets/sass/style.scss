@@ -92,9 +92,11 @@
 }
 .pricing-card {
   @include display-flex(column, center, center, nowrap);
+  margin-top: 50px;
   margin-right: 20px;
   margin-left: 20px;
   max-width: 500px;
+  min-width: 270px;
   flex: 1;
   border-radius: 10px;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.10);
@@ -208,6 +210,10 @@
     font-size: 25px;
     font-weight: $semibold_weight;
   }
+  .edit-icon {
+    cursor: pointer;
+    margin-left: 10px;
+  }
   .status-icon {
     margin-right: 10px;
     width: 75px;
@@ -309,5 +315,26 @@
   &:hover {
     color: $white !important;
     background-color: $secondary2_color !important;
+  }
+}
+.pagination {
+  @include display-flex(row, center, center);
+  margin-top: 50px;
+  li:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  .page-item{
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    a{
+    }
+    &.active, &:hover{
+      background-color: $secondary2_color;
+      border-radius: 100%;
+      a {
+        color: $white;
+      }
+    }
   }
 }

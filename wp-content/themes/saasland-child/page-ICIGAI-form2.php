@@ -75,7 +75,7 @@ while ( have_posts() ) : the_post();
                         <div class="form-content">
                             <header-wizard inline-template>
                                 <div class="progress-field">
-                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 4}">
+                                    <div v-for="(step, index) in steps" :class="{'progress-step': true, 'active': index <= 4}" @click="goToStep(index, 4)">
                                         <span class="step-one">{{index+1}}</span>
                                         <p class="progress-step__text">{{step.name}}</p>
                                     </div>
@@ -134,11 +134,12 @@ while ( have_posts() ) : the_post();
                                             <option value="">Select</option>
                                             <option v-for="option in institutionTypes" :key="option.value" :value="option.value">{{option.name}}</option>
                                         </select>
+                                        <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/arrow-down.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="form-element">
                                     <label for=""
-                                    >Institution <span class="required">*</span></label
+                                    >Institution Name<span class="required">*</span></label
                                     >
                                     <div class="input-container">
                                         <input v-model="institutionName" placeholder="Institution Name" type="text" />
@@ -153,9 +154,117 @@ while ( have_posts() ) : the_post();
                                     asterisk (*) are required!
                                 </p>
                             </div>
+                            <div class="row2 summary">
+                                <div class="row2 summary-toggle" @click="toggleShowSummary()">
+                                    <h1 v-if="showSummary">
+                                        <i class="fa fa-minus-circle"></i>
+                                        Hide Summary
+                                    </h1>
+                                    <h1 v-else>
+                                        <i class="fa fa-plus-circle"></i>
+                                        Show Summary
+                                    </h1>
+                                </div>
+                                <template v-if="showSummary">
+                                    <div class="row2 summary-title">
+                                        <h1>Basic information</h1>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">First Name: </label>
+                                            <h2>{{firstName}}</h2>
+                                        </div>
+                                        <div class="form-element2">
+                                            <label for="">Last Name: </label>
+                                            <h2>{{lastName}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">Email Address: </label>
+                                            <h2>{{email}}</h2>
+                                        </div>
+                                        <div class="form-element2">
+                                            <label for="">Phone Number: </label>
+                                            <h2>{{phone}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">Institution Type: </label>
+                                            <h2>{{institutionType}}</h2>
+                                        </div>
+                                        <div class="form-element2">
+                                            <label for="">Institution Name: </label>
+                                            <h2>{{institutionName}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2 summary-title">
+                                        <h1>Plan information</h1>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">Product Type: </label>
+                                            <h2>{{product_type}}</h2>
+                                        </div>
+                                        <div class="form-element2">
+                                            <label for="">Plan: </label>
+                                            <h2>{{plan}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">Number of Licenses: </label>
+                                            <h2>{{licenses}}</h2>
+                                        </div>
+                                        <div v-if="vouchers" class="form-element2">
+                                            <label for="">Number of Vouchers: </label>
+                                            <h2>{{vouchers}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="form-element2">
+                                            <label for="">Selected Package: </label>
+                                            <h2>{{package_name}}</h2>
+                                        </div>
+                                        <div class="form-element2">
+                                            <label for="">Is training required? </label>
+                                            <h2>{{required}}</h2>
+                                        </div>
+                                    </div>
+                                    <div v-if="required === 'Yes'" class="row2">
+                                        <!--                                <div class="form-element">-->
+                                        <!--                                    <label for="">Training Type: </label>-->
+                                        <!--                                    <h2>{{training_type}}</h2>-->
+                                        <!--                                </div>-->
+                                        <div class="form-element2">
+                                            <label for="">Number of users: </label>
+                                            <h2>{{n_users_training}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2 summary-title">
+                                        <h1>Selected Services: </h1>
+                                    </div>
+                                    <div class="row2" v-for="(service, index) in previousData.selectedServices">
+                                        <div class="form-element2">
+                                            <label for="">{{index+1}}: </label>
+                                            <h2>{{service.name}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row2 summary-title">
+                                        <h1>Selected Addons: </h1>
+                                    </div>
+                                    <div class="row2" v-for="(service, index) in previousData.selectedAddons">
+                                        <div class="form-element2">
+                                            <label for="">{{index+1}}: </label>
+                                            <h2>{{service.name}}</h2>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
                             <div class="row btn-container">
                                 <button class="back-btn" @click="goBack()">Back</button>
-                                <button class="proceed-btn" @click="proceed">Summary</button>
+                                <button class="proceed-btn" @click="proceed">Get My Quote</button>
                             </div>
                         </div>
                     </div>

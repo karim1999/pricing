@@ -1,5 +1,6 @@
 Vue.use(VueLoading);
 Vue.component('loading', VueLoading)
+Vue.component('paginate', VuejsPaginate)
 Vue.component('header-wizard', {
     name: "HeaderWizard",
     data(){
@@ -20,10 +21,17 @@ Vue.component('header-wizard', {
                 {
                     name: "Personal Information"
                 },
-                {
-                    name: "Summary"
-                },
+                // {
+                //     name: "Summary"
+                // },
             ]
+        }
+    },
+    methods: {
+        goToStep(index, current){
+            if(index < current){
+                window.history.go(index - current);
+            }
         }
     }
 });
@@ -51,4 +59,11 @@ Vue.component('pricing-card', {
             return (index % 3) + 1
         }
     }
+});
+Vue.filter('truncate', function (value, limit) {
+    if (value.length > limit) {
+        value = value.substring(0, (limit - 3)) + '...';
+    }
+
+    return value
 });

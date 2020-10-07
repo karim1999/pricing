@@ -18,8 +18,10 @@
     font-size: 25px;
     font-weight: $semibold_weight;
   }
+  flex-wrap: nowrap;
+  overflow-x: scroll;
   .plans-container {
-    @include display-flex(row, space-evenly, flex-start, wrap);
+    @include display-flex(row, space-evenly, flex-start, nowrap);
     .plan {
       padding: 20px 0;
       width: 240px;
@@ -83,6 +85,29 @@
       }
     }
   }
+  .btn-container {
+    justify-content: flex-end !important;
+    button {
+      @include main-button(
+                      $secondary3_color,
+                      64px,
+                      $font2,
+                      $semibold_weight,
+                      15px
+      );
+      &.back-btn {
+        background-color: $secondary2_color;
+        border-radius: 65px 65px 65px 65px;
+        margin-right: 20px;
+        &:hover {
+          color: $white !important;
+          background-color: $secondary2_color !important;
+        }
+      }
+      &.proceed-btn {
+      }
+    }
+  }
 }
 .table2 {
   .parent-feature {
@@ -102,7 +127,8 @@
   .feature-container {
     padding-left: 17px;
     .feature-name {
-      @include display-flex(row, flex-start, center);
+      @include display-flex(row, flex-start, center, nowrap);
+      min-width: 200px;
       h2 {
         font-family: $font1;
         font-size: 18px;
